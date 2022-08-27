@@ -1,3 +1,4 @@
 config:
   aws:profile: aaron
   aws:region: ap-southeast-2
+  pulumi-ytb-cloudspeak:bucketName: my-cli-bucket
