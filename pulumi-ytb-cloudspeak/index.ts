@@ -5,8 +5,11 @@ import { getStack } from "@pulumi/pulumi";
 
 const pool = new aws.cognito.UserPool('user-pool', {})
 
-// id is an Output<string>, means will be string
-pool.id
+// id is an Output<string>, means it will be string
+// pool.id
+// // Get output from other stack
+// const otherStack = new pulumi.StackReference('<org>/<project-name>/<stack>')
+// const someId = otherStack.getOutput('<outPutName>')
 
 const client = new aws.cognito.UserPoolClient('user-pool-client', {
   userPoolId: pool.id
